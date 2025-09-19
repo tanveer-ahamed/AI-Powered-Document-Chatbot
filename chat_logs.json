@@ -1,0 +1,72 @@
+[
+  {
+    "timestamp": "2025-09-18 18:00:38 HKT",
+    "user_query": "how fire is prevented",
+    "expanded_query": "how fire is prevented",
+    "retrieved_chunks": [
+      {
+        "id": 70,
+        "text": "5. \nBuilt-In Safety Systems \n5.1 \nFire Suppression System \nThe fire suppression system (FSS) is an automated extinguishing system built to detect and suppress fire upon \ndetection of heat and smoke. \nThe FSS is divided into four main parts: \n1. Fire Extinguisher \n2. Fire Alarm Control Panel \n3. Status Indicator \n4. Smoke and Heat Sensors",
+        "page": 17,
+        "score": 0.5290876626968384
+      },
+      {
+        "id": 50,
+        "text": "2.3 \nGeneral Fire Safety \nTo mitigate and/or prevent fire from occurring in the workplace, the following rules regarding fire safety in the \nworkplace are applicable: \n● \nSmoking around or nearby is prohibited.",
+        "page": 12,
+        "score": 0.5229129195213318
+      },
+      {
+        "id": 74,
+        "text": "CAUTION \nDo not stand near any fire extinguisher before or during the release as the high \ntemperature may result in injury.",
+        "page": 18,
+        "score": 0.49026232957839966
+      },
+      {
+        "id": 79,
+        "text": "At the front of the Enertainer, there is the status indicator. The status of the FSS can be monitored and the \nmanual release of the extinguishant can be triggered on the outside. This function is given to users in case there \nare any emergencies that require immediate fire suppression.",
+        "page": 19,
+        "score": 0.4272421598434448
+      },
+      {
+        "id": 75,
+        "text": "5.1.2 \nFire Alarm Control Panel \nThe fire alarm control panel (FACP) is located behind the control door. Its main operation is to control the \nseries of smoke and heat sensors, fire alarm, and the fire extinguisher triggers. When one of the sensors is \ntriggered, the fire alarm will activate, giving indication of the presence of smoke or heat inside. When multiple \nsensors are activated together, it will initiate a signal to release the extinguishant.",
+        "page": 18,
+        "score": 0.4184490740299225
+      }
+    ],
+    "images": [
+      {
+        "id": "img_81",
+        "page": 18,
+        "path": "static/images\\page18_img7.png",
+        "filename": "page18_img7.png",
+        "score": 0.28235217928886414
+      },
+      {
+        "id": "img_130",
+        "page": 25,
+        "path": "static/images\\page25_img6.png",
+        "filename": "page25_img6.png",
+        "score": 0.25664079189300537
+      },
+      {
+        "id": "img_70",
+        "page": 17,
+        "path": "static/images\\page17_img2.png",
+        "filename": "page17_img2.png",
+        "score": 0.2550322115421295
+      }
+    ],
+    "raw_answer": "To mitigate and/or prevent fire, smoking around or nearby is prohibited. (Page 12)",
+    "final_answer": "Smoking is prohibited near or around [location/object, if applicable] to prevent fire. (Page 12)",
+    "metrics": {
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "tokens_used": {
+      "first_pass": "prompt_token_count: 565\ncandidates_token_count: 22\ntotal_token_count: 587\n",
+      "second_pass": "prompt_token_count: 59\ncandidates_token_count: 25\ntotal_token_count: 84\n"
+    }
+  }
+]

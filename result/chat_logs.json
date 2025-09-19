@@ -1,0 +1,116 @@
+[
+  {
+    "timestamp": "2025-09-19 13:10:36 HKT",
+    "user_query": "General Fire Safety",
+    "expanded_query": "General Fire Safety",
+    "retrieved_chunks": [
+      {
+        "id": 50,
+        "text": "2.3 \nGeneral Fire Safety \nTo mitigate and/or prevent fire from occurring in the workplace, the following rules regarding fire safety in the \nworkplace are applicable: \n● \nSmoking around or nearby is prohibited.",
+        "page": 12,
+        "score": 0.627989649772644
+      },
+      {
+        "id": 74,
+        "text": "CAUTION \nDo not stand near any fire extinguisher before or during the release as the high \ntemperature may result in injury.",
+        "page": 18,
+        "score": 0.5898867845535278
+      },
+      {
+        "id": 70,
+        "text": "5. \nBuilt-In Safety Systems \n5.1 \nFire Suppression System \nThe fire suppression system (FSS) is an automated extinguishing system built to detect and suppress fire upon \ndetection of heat and smoke. \nThe FSS is divided into four main parts: \n1. Fire Extinguisher \n2. Fire Alarm Control Panel \n3. Status Indicator \n4. Smoke and Heat Sensors",
+        "page": 17,
+        "score": 0.5245295763015747
+      },
+      {
+        "id": 9,
+        "text": "TABLE OF CONTENTS \n1. \nOverview \n5 \n1.1 \nAC Section \n5 \n1.1.1 \nxHMI \n6 \n1.1.2 \nUPS \n6 \n1.1.3 \nSystem BMS \n6 \n1.1.4 \nEMS \n7 \n1.1.5 \nCharger \n7 \n1.1.6 \nPCS \n7 \n1.1.7 \nExhaust Fans \n7 \n1.1.8 \nHeater \n8 \n1.2 \nDC Section \n9 \n1.2.1 \nString BMS \n9 \n1.2.2 \nESM \n9 \n1.2.3 \nPBMS \n11 \n1.2.4 \nHVAC \n11 \n2. \nSafety Guidelines \n11 \n2.1 \nWork Environment \n12 \n2.2 \nGeneral Electrical Safety \n12 \n2.3 \nGeneral Fire Safety \n12 \n2.4 \nPersonal Protective Equipment \n13 \n3. \nEnvironmental Conditions \n13 \n3.1 \nIndustrial Environments \n13 \n3.2 \nWet Environments \n14 \n3.3 \nHigh Temperature Environments \n14 \n3.4 \nLow Temperature Environments \n15 \n4. \nLogistics (Transportation and Storage) \n15 \n4.1 \nPreliminary Checks \n15 \n4.2 \nLifting \n15 \n4.3 \nLand Transportation \n16 \n4.4 \nStorage \n17 \n5. \nBuilt-In Safety Systems \n17 \n5.1 \nFire Suppression System \n17 \n5.1.1 \nFire Extinguisher (Aerosol and FM-200) \n17 \n5.1.2 \nFire Alarm Control Panel \n18 \n5.1.3 \nSmoke and Heat Sensors \n19 \n5.2 \nFlood Sensors \n20 \n5.3 \nHydrogen Sensor \n21 \n5.4 \nEmergency Stop \n21 \n6. \nInternet Connectivity \n21 \n6.1 \nEnernet \n22",
+        "page": 3,
+        "score": 0.5079482793807983
+      },
+      {
+        "id": 71,
+        "text": "5.1.1 \nFire Extinguisher (Aerosol and FM-200) \nThere are fire extinguishers installed in the AC and DC section, which will activate together upon signal. These \nextinguishers are using aerosol technology. The generators consist of packaging filled with a dry solid \nextinguishing agent, which following activation, is discharged as a dry aerosol. It is effective in extinguishing gas \nand liquid fires in electrical equipment. There are no toxic substances nor any risk of increased air pressure \nwithin the enclosure.",
+        "page": 17,
+        "score": 0.4221016764640808
+      },
+      {
+        "id": 75,
+        "text": "5.1.2 \nFire Alarm Control Panel \nThe fire alarm control panel (FACP) is located behind the control door. Its main operation is to control the \nseries of smoke and heat sensors, fire alarm, and the fire extinguisher triggers. When one of the sensors is \ntriggered, the fire alarm will activate, giving indication of the presence of smoke or heat inside. When multiple \nsensors are activated together, it will initiate a signal to release the extinguishant.",
+        "page": 18,
+        "score": 0.4214862287044525
+      },
+      {
+        "id": 79,
+        "text": "At the front of the Enertainer, there is the status indicator. The status of the FSS can be monitored and the \nmanual release of the extinguishant can be triggered on the outside. This function is given to users in case there \nare any emergencies that require immediate fire suppression.",
+        "page": 19,
+        "score": 0.40569502115249634
+      },
+      {
+        "id": 49,
+        "text": "2.2 \nGeneral Electrical Safety \nThe following practices will reduce risk of electrocution when working on or near the Enertainer: \n● \nGuard/lock/isolate all sources of electricity and exposed circuits. \n● \nProtect/repair/replace all frayed or damaged cables. \n● \nDo not work on the system when there are rainy or wet weather conditions. \n● \nCut off all sources of power (main switch or circuit breaker) if there is any contact with water. \n● \nAvoid wearing jewelry (made of conductive material) when doing any service work. \n● \nEnsure that appropriate PPE (Personal Protective Equipment) is worn for electrical service works. \n● \nEnsure that the system is completely de-energized before proceeding to do any service work. \n● \nAll cable connections and terminations must comply with the national or regional electrical standards.",
+        "page": 12,
+        "score": 0.3939252197742462
+      },
+      {
+        "id": 46,
+        "text": "2. \nSafety Guidelines \nWhile the Enertainer is designed to include multiple safety systems and safety protection layers, it is important \nto follow the proper safe workplace practices around electrical systems.",
+        "page": 11,
+        "score": 0.3603932857513428
+      },
+      {
+        "id": 133,
+        "text": "EMS is normal \nFSS \nSmoke detector is activated, \nheat detector is activated, FSS \nfault",
+        "page": 28,
+        "score": 0.3599160313606262
+      }
+    ],
+    "images": [
+      {
+        "id": "img_81",
+        "page": 18,
+        "path": "static/images\\page18_img7.png",
+        "filename": "page18_img7.png",
+        "score": 0.3097902834415436
+      },
+      {
+        "id": "img_78",
+        "page": 18,
+        "path": "static/images\\page18_img4.png",
+        "filename": "page18_img4.png",
+        "score": 0.2840275168418884
+      },
+      {
+        "id": "img_97",
+        "page": 21,
+        "path": "static/images\\page21_img2.png",
+        "filename": "page21_img2.png",
+        "score": 0.27329668402671814
+      },
+      {
+        "id": "img_46",
+        "page": 12,
+        "path": "static/images\\page12_img2.png",
+        "filename": "page12_img2.png",
+        "score": 0.27209600806236267
+      },
+      {
+        "id": "img_74",
+        "page": 18,
+        "path": "static/images\\page18_img0.png",
+        "filename": "page18_img0.png",
+        "score": 0.2719419002532959
+      }
+    ],
+    "raw_answer": "General Fire Safety (Page 12): Smoking around or nearby the Enertainer is prohibited.\n\nFire Suppression System (FSS) (Page 17, 18, 19):  The FSS is an automated system that detects and suppresses fire using smoke and heat sensors.  It includes a fire extinguisher (using aerosol technology with a dry solid extinguishing agent, effective on gas and liquid fires in electrical equipment; no toxic substances or increased air pressure risk; Page 17), a fire alarm control panel (FACP; located behind the control door; controls sensors, alarm, and extinguisher triggers; Page 18), a status indicator (located at the front; allows monitoring and manual extinguisher release; Page 19), and smoke and heat sensors (Page 17).  When multiple sensors are activated, the extinguishant is released (Page 18).  Extinguishers are installed in both AC and DC sections and activate together upon signal (Page 17). CAUTION: Do not stand near any fire extinguisher before or during release due to high temperature risk of injury (Page 18).",
+    "final_answer": "**General Fire Safety:**  Smoking is strictly prohibited in the vicinity of the Enertainer (Page 12).\n\n**Fire Suppression System (FSS):** The Enertainer incorporates an automated Fire Suppression System (FSS) designed to detect and suppress fires.  This system comprises several key components detailed below:\n\n* **Fire Extinguisher:** An aerosol-based fire extinguisher utilizing a dry solid extinguishing agent is integrated into the FSS (Page 17). This extinguisher is effective against gas and liquid fires, including those involving electrical equipment.  Importantly, it employs a non-toxic agent and does not pose a risk of increased air pressure (Page 17).  Extinguishers are installed in both the AC and DC sections of the Enertainer and are designed to activate simultaneously upon receiving a signal (Page 17).\n\n* **Fire Alarm Control Panel (FACP):** The FACP is located behind the control door and serves as the central control unit for the FSS (Page 18). It manages the sensors, the fire alarm, and the activation of the fire extinguisher.\n\n* **Status Indicator:** A status indicator is situated on the front of the Enertainer, enabling monitoring of the FSS and providing the option for manual extinguisher release (Page 19).\n\n* **Smoke and Heat Sensors:**  Smoke and heat sensors are integral components of the FSS (Page 17).  Activation of multiple sensors triggers the release of the extinguishing agent (Page 18).\n\n**CAUTION:**  To avoid the risk of serious injury from high temperatures, personnel must not stand near any fire extinguisher before or during its deployment (Page 18).",
+    "metrics": {
+      "precision": 1.0,
+      "recall": 1.0
+    },
+    "tokens_used": {
+      "first_pass": "prompt_token_count: 1604\ncandidates_token_count: 230\ntotal_token_count: 1834\n",
+      "second_pass": "prompt_token_count: 276\ncandidates_token_count: 345\ntotal_token_count: 621\n"
+    }
+  }
+]

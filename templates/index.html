@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document Chatbot</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      background: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      min-height: 100vh;
+      padding: 20px;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    .chat-container {
+      width: 700px;
+      max-width: 100%;
+      height: 85vh;
+      background: #ffffff;
+      border-radius: 16px;
+      box-shadow: 0 8px 30px rgba(0,0,0,0.1);
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+
+    .chat-header {
+      background: linear-gradient(135deg, #0d9488, #10b981);
+      color: #fff;
+      padding: 24px 20px;
+      text-align: center;
+      line-height: 1.6;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+
+    .chat-header .title { font-size: 1.9rem; font-weight: 700; margin-bottom: 6px; }
+    .chat-header .subtitle { font-size: 1rem; font-weight: 400; }
+
+    .chat-body {
+      flex: 1;
+      padding: 20px;
+      overflow-y: auto;
+      background: #f5f6f7;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+      scroll-behavior: smooth;
+    }
+
+    .message { display: flex; max-width: 80%; flex-direction: column; word-wrap: break-word; }
+    .message.user { align-self: flex-end; text-align: right; }
+    .message.bot { align-self: flex-start; text-align: left; }
+
+    .bubble {
+      padding: 14px 20px;
+      border-radius: 20px;
+      line-height: 1.6;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+      font-size: 1rem;
+      white-space: pre-line;
+      animation: fadeIn 0.3s ease-in;
+    }
+
+    .message.user .bubble {
+      background: linear-gradient(135deg, #0084ff, #00c6ff);
+      color: #fff;
+      border-bottom-right-radius: 6px;
+    }
+
+    .message.bot .bubble {
+      background: #e5e5ea;
+      color: #111;
+      border-bottom-left-radius: 6px;
+    }
+
+    .timestamp { font-size: 0.75rem; color: #999; margin-top: 4px; }
+
+    .chat-footer {
+      padding: 12px 16px;
+      border-top: 1px solid #e0e0e0;
+      background: #fff;
+      display: flex;
+      gap: 12px;
+      align-items: center;
+    }
+
+    .chat-footer input {
+      flex: 1;
+      padding: 14px 18px;
+      border-radius: 24px;
+      border: 1px solid #cfd8dc;
+      font-size: 1rem;
+      outline: none;
+      transition: border 0.2s, box-shadow 0.2s;
+    }
+
+    .chat-footer input:focus {
+      border-color: #0084ff;
+      box-shadow: 0 0 0 2px rgba(0, 132, 255, 0.25);
+    }
+
+    .chat-footer button {
+      background: #0084ff;
+      border: none;
+      color: #fff;
+      padding: 14px 20px;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: background 0.3s, transform 0.2s;
+    }
+
+    .chat-footer button:hover {
+      background: #006fe0;
+      transform: scale(1.1);
+    }
+
+    .chat-body::-webkit-scrollbar { width: 8px; }
+    .chat-body::-webkit-scrollbar-track { background: #f0f2f5; border-radius: 4px; }
+    .chat-body::-webkit-scrollbar-thumb { background-color: #b0bec5; border-radius: 4px; }
+
+    @keyframes fadeIn { from {opacity: 0; transform: translateY(5px);} to {opacity: 1; transform: translateY(0);} }
+
+    .bot-images { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+    .bot-images img { max-width: 120px; border-radius: 8px; cursor: pointer; transition: transform 0.2s; }
+    .bot-images img:hover { transform: scale(1.05); }
+
+    @media (max-width: 640px) { .chat-container { width: 100%; height: 90vh; } }
+  </style>
+</head>
+<body>
+  <div class="chat-container">
+    <div class="chat-header">
+      <div class="title">Welcome to the Document Chatbot!</div>
+      <div class="subtitle">Ask a question about the internal document (type <b>'exit'</b> to quit).</div>
+    </div>
+
+    <div class="chat-body" id="chat-body">
+      {% if chat_history %}
+        {% for entry in chat_history %}
+          <!-- User message -->
+          <div class="message user">
+            <div class="bubble">{{ entry.user_query }}</div>
+            <div class="timestamp">{{ entry.timestamp }}</div>
+          </div>
+
+          <!-- Bot response -->
+          <div class="message bot">
+            <div class="bubble">{{ entry.final_answer }}</div>
+            {% if entry.images %}
+              <div class="bot-images">
+                {% for img in entry.images %}
+                  <a href="{{ url_for('static', filename='images/' + img.filename) }}" target="_blank">
+                    <img src="{{ url_for('static', filename='images/' + img.filename) }}" 
+                         alt="Image on page {{ img.page }}">
+                  </a>
+                {% endfor %}
+              </div>
+            {% endif %}
+            <div class="timestamp">{{ entry.timestamp }}</div>
+          </div>
+        {% endfor %}
+      {% else %}
+        <p class="text-center text-muted mt-3">Waiting for your first question…</p>
+      {% endif %}
+    </div>
+
+    <form method="post" class="chat-footer">
+      <input type="text" name="query" placeholder="Type your question..." required autofocus>
+      <button type="submit">&#9658;</button>
+    </form>
+  </div>
+
+  <script>
+    const chatBody = document.getElementById('chat-body');
+    chatBody.scrollTop = chatBody.scrollHeight;
+  </script>
+
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
